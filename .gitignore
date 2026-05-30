@@ -1,0 +1,46 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# Data, models, and outputs
+/data/
+/datasets/
+**/dataset/
+/models/
+/outputs/
+*.joblib
+*.pkl
+*.h5
+*.pt
+*.ckpt
+*.model
+ 
+# Specific dataset folder
+DAY 7/AI_SMART_FACTORY/DS/
+DAY 7/AI_SMART_FACTORY/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
