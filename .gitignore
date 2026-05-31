@@ -44,3 +44,6 @@ Thumbs.db
 
 # Node
 node_modules/
+*.tar
+
+DAY 10/TASK 20/yolo-model.tar
