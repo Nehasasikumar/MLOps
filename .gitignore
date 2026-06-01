@@ -24,7 +24,7 @@ ENV/
 /models/
 /outputs/
 *.joblib
-*.pkl
+
 *.h5
 *.pt
 *.ckpt
