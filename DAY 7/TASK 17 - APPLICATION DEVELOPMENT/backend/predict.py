@@ -1,6 +1,10 @@
 import re
 import pickle
 
+# ==========================
+# LOAD MODELS
+# ==========================
+
 sensor_model = pickle.load(
     open("sensor_model.pkl", "rb")
 )
@@ -14,16 +18,6 @@ text_model = pickle.load(
 )
 
 # ==========================
-# CHECK FOR NUMBERS
-# ==========================
-
-def contains_numbers(text):
-
-    return bool(
-        re.search(r'\d', text)
-    )
-
-# ==========================
 # EXTRACT SENSOR VALUES
 # ==========================
 
@@ -32,7 +26,7 @@ def extract_values(text):
     text = text.lower()
 
     temp = re.search(
-        r'(\d+)\s*(?:c|°c)',
+        r'(\d+\.?\d*)\s*(?:c|°c|degree|degrees|temperature)?',
         text
     )
 
@@ -85,11 +79,18 @@ def extract_values(text):
 
     return values
 
+# ==========================
+# PREDICT MACHINE STATUS
+# ==========================
+
 def predict_machine(text):
 
-    if contains_numbers(text):
+    values = extract_values(text)
 
-        values = extract_values(text)
+    print("Extracted Values:", values)
+
+    # Sensor-based prediction
+    if any(v > 0 for v in values):
 
         values_scaled = scaler.transform(
             [values]
@@ -119,6 +120,7 @@ def predict_machine(text):
 
         }
 
+    # Text-based prediction
 
     prediction = text_model.predict(
         [text]
