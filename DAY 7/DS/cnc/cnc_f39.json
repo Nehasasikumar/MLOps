@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          4.561403508771946,
+          41.929824561403564
+        ],
+        [
+          353.68421052631584,
+          613.859649122807
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f39.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          355.4098360655738,
+          588.8524590163935
+        ],
+        [
+          4.5901639344262435,
+          5.245901639344243
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f4.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

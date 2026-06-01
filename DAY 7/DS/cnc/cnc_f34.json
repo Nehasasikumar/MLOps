@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          2.9508196721311606,
+          98.68852459016392
+        ],
+        [
+          360.0,
+          551.058526815518
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f34.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

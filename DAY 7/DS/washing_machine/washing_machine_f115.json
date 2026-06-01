@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          348.8524590163935,
+          621.639344262295
+        ],
+        [
+          0.0,
+          94.30423179565378
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "washing_machine_f115.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          2.807017543859672,
+          5.087719298245673
+        ],
+        [
+          360.0,
+          621.8990158322637
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f51.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

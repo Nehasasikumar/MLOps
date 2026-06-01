@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          1.0526315789473983,
+          1.5789473684211124
+        ],
+        [
+          360.0,
+          618.8990592423087
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f43.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

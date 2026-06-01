@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "defect",
+      "points": [
+        [
+          0.5882352941175668,
+          161.1764705882353
+        ],
+        [
+          360.0,
+          572.3435294117648
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "washing_machine_anomoly_f26.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

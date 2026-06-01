@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          7.450980392156907,
+          1.372549019607824
+        ],
+        [
+          356.4705882352941,
+          609.2156862745097
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f48.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

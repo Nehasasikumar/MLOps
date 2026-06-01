@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          358.688524590164,
+          606.8852459016393
+        ],
+        [
+          6.229508196721326,
+          0.32786885245899766
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f18.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

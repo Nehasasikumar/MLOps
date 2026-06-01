@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          1.0526315789473983,
+          94.56140350877199
+        ],
+        [
+          353.68421052631584,
+          547.1929824561404
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f36.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

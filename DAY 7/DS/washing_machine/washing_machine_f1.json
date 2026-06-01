@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          47.21311475409834,
+          123.27868852459015
+        ],
+        [
+          360.0,
+          595.5868852459016
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "washing_machine_f1.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

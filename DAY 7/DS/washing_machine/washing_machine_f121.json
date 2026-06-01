@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          353.7704918032787,
+          510.1639344262295
+        ],
+        [
+          102.95081967213116,
+          124.91803278688523
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "washing_machine_f121.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

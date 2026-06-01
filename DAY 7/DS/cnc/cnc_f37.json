@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          8.07017543859655,
+          73.50877192982462
+        ],
+        [
+          353.68421052631584,
+          589.2982456140351
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f37.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

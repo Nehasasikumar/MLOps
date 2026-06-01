@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "defect",
+      "points": [
+        [
+          253.68421052631584,
+          217.36842105263162
+        ],
+        [
+          360.0,
+          355.7477025898079
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_anomoly_f2.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

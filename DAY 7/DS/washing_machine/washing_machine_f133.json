@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          7.868852459016409,
+          74.0983606557377
+        ],
+        [
+          334.0983606557377,
+          524.9180327868852
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "washing_machine_f133.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

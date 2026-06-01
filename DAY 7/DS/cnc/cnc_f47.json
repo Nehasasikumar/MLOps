@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          6.315789473684276,
+          1.5789473684211124
+        ],
+        [
+          355.43859649122805,
+          617.3684210526316
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f47.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

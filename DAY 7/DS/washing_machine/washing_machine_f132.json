@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          25.90163934426232,
+          87.21311475409836
+        ],
+        [
+          348.8524590163935,
+          541.311475409836
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "washing_machine_f132.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

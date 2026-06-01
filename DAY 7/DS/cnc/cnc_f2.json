@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          355.4098360655738,
+          560.983606557377
+        ],
+        [
+          0.0,
+          2.714275020585319
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f2.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

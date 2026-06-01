@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          358.688524590164,
+          610.1639344262295
+        ],
+        [
+          0.0,
+          167.945205479452
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f32.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          337.37704918032796,
+          582.2950819672132
+        ],
+        [
+          12.786885245901658,
+          13.442622950819652
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f5.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

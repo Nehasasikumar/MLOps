@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          7.868852459016409,
+          165.9016393442623
+        ],
+        [
+          358.6885245901639,
+          493.7704918032787
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f29.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

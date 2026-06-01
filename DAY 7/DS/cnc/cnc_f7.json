@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          350.4918032786885,
+          603.6065573770492
+        ],
+        [
+          0.0,
+          6.955394586351417
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f7.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}

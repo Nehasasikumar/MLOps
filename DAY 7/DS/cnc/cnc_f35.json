@@ -1,0 +1,28 @@
+{
+  "version": "6.3.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "no_defect",
+      "points": [
+        [
+          8.947368421052715,
+          118.68421052631575
+        ],
+        [
+          340.52631578947376,
+          560.7894736842105
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cnc_f35.jpg",
+  "imageData": null,
+  "imageHeight": 640,
+  "imageWidth": 360
+}
