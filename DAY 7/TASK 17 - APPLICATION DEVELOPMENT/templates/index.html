@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Machine Anomaly Predictor</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Machine Anomaly Predictor</h1>
+      <p>Enter the raw text or log line below and click Predict.</p>
+
+      <textarea id="textInput" placeholder="Paste text or log here" rows="8"></textarea>
+      <button id="predictBtn">Predict</button>
+
+      <section id="result" class="hidden">
+        <h2>Result</h2>
+        <pre id="resultText"></pre>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
