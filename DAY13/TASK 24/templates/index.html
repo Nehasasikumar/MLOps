@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Machine Health & Anomaly Detector</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!-- Glow Orbs for ambient lighting -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <header>
+        <div class="header-container">
+            <h1><i class="fa-solid fa-microchip"></i> Machine Anomaly Detector</h1>
+            <p>Upload video or image feed to classify condition and retrieve machine health analytics</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Left Panel: Upload and File Control -->
+        <section class="glass-panel" id="upload-panel">
+            <div class="panel-title">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Upload Feed Source
+            </div>
+            
+            <div class="dropzone-container">
+                <!-- Drag and Drop Dropzone -->
+                <div class="dropzone" id="dropzone">
+                    <input type="file" id="file-input" class="file-input" accept="image/*,video/*">
+                    <i class="fa-solid fa-file-video dropzone-icon"></i>
+                    <span class="dropzone-text" id="dropzone-prompt">Drag & Drop Image or Video here</span>
+                    <span class="dropzone-subtext">Supports PNG, JPG, JPEG, MP4, AVI, MOV, WEBM</span>
+                    <button type="button" class="btn btn-secondary" style="padding: 0.5rem 1rem; margin-top: 0.5rem; font-size: 0.9rem;" onclick="document.getElementById('file-input').click(); event.stopPropagation();">
+                        Browse Files
+                    </button>
+                </div>
+
+                <!-- Media Preview Area -->
+                <div class="preview-container" id="preview-container">
+                    <img class="preview-media" id="preview-img" style="display: none;" alt="Selected Preview">
+                    <video class="preview-media" id="preview-video" style="display: none;" controls muted></video>
+                    <!-- Fallback placeholder for unsupported videos -->
+                    <div id="preview-fallback" style="display: none; padding: 3rem 1.5rem; text-align: center; color: var(--text-muted); background: rgba(0,0,0,0.3); flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border-radius: 16px;">
+                        <i class="fa-solid fa-file-video" style="font-size: 3.5rem; color: var(--primary);"></i>
+                        <div style="font-weight: 600; color: #fff; word-break: break-all;" id="fallback-filename">video.mp4</div>
+                        <div style="font-size: 0.9rem;">Browser preview unavailable, but file is ready for analysis.</div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-container">
+                    <button type="button" class="btn btn-secondary" id="clear-btn" style="display: none;">
+                        <i class="fa-solid fa-trash-can"></i> Clear
+                    </button>
+                    <button type="button" class="btn btn-primary" id="analyze-btn" disabled>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Run Health Analysis
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loader Overlay (active during api request) -->
+            <div class="loader-overlay" id="loader-overlay">
+                <div class="spinner">
+                    <div class="spinner-circle"></div>
+                    <div class="spinner-inner"></div>
+                </div>
+                <div class="loader-text" id="loader-status">Uploading Media...</div>
+                <div class="loader-subtext">Executing YOLO frame classification model...</div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Health Analysis Results -->
+        <section class="glass-panel results-hidden" id="results-panel">
+            <div class="panel-title">
+                <i class="fa-solid fa-chart-line"></i> Analysis Diagnosis
+            </div>
+
+            <div class="results-layout">
+                <!-- Action Recommendation Banner -->
+                <div class="recommendation-banner" id="recommendation-banner">
+                    <div class="banner-action-title" id="banner-action-title">Recommendation</div>
+                    <div class="banner-action" id="banner-action">REPAIR IS REQ IMMEDIATELY</div>
+                    <div class="banner-desc" id="banner-desc">Anomalies were detected on several frame intervals.</div>
+                </div>
+
+                <!-- Main Metrics Breakdown Grid -->
+                <div class="metrics-row">
+                    <!-- SVG Circular Gauge -->
+                    <div class="metric-card">
+                        <div class="gauge-container">
+                            <svg class="gauge-svg">
+                                <circle class="gauge-bg" cx="70" cy="70" r="50"></circle>
+                                <circle class="gauge-fill" id="gauge-fill-circle" cx="70" cy="70" r="50"></circle>
+                            </svg>
+                            <div class="gauge-text-container">
+                                <div class="gauge-percentage" id="gauge-pct">0%</div>
+                                <div class="gauge-label">Health</div>
+                            </div>
+                        </div>
+                        <span class="metric-label" style="margin-top: 0.5rem;">Machine Health</span>
+                    </div>
+
+                    <!-- Frames details -->
+                    <div class="metric-card" style="justify-content: space-around;">
+                        <div style="width: 100%;">
+                            <div class="metric-value" id="healthy-frames-val">0</div>
+                            <div class="metric-label" style="color: var(--color-success); font-size: 0.8rem;">Healthy Frames</div>
+                        </div>
+                        <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); width: 80%; margin: 0.5rem 0;"></div>
+                        <div style="width: 100%;">
+                            <div class="metric-value" id="anomaly-frames-val">0</div>
+                            <div class="metric-label" style="color: var(--color-danger); font-size: 0.8rem;">Anomaly Frames</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine type classification -->
+                <div class="metric-card" style="align-items: flex-start; text-align: left; padding: 1.25rem;">
+                    <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+                        <div>
+                            <div class="metric-label" style="font-size: 0.75rem;">Detected Asset</div>
+                            <div class="metric-value" id="machine-type-val" style="font-size: 1.3rem; font-weight: 700; margin-top: 0.25rem;">CNC Machine</div>
+                        </div>
+                        <div style="font-size: 2rem; color: rgba(255,255,255,0.15);">
+                            <i class="fa-solid fa-industry" id="machine-type-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Class Breakdown -->
+                <div>
+                    <div class="metric-label" style="margin-bottom: 0.75rem;">YOLO Class Distribution</div>
+                    <div class="breakdown-container" id="class-breakdown-container">
+                        <!-- Breakdown bars will be rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Exact ASCII Report (As requested by user) -->
+                <div class="ascii-console-container">
+                    <div class="console-header">
+                        <div class="console-dot-container">
+                            <div class="console-dot red"></div>
+                            <div class="console-dot yellow"></div>
+                            <div class="console-dot green"></div>
+                        </div>
+                        <div class="console-title">Text Report Output</div>
+                        <button type="button" class="copy-btn" id="copy-report-btn">
+                            <i class="fa-regular fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <pre class="ascii-console" id="ascii-console">===== MACHINE HEALTH REPORT =====</pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Industrial MLOps. Automated YOLO Frame Diagnostics Pipeline.</p>
+    </footer>
+
+    <!-- Main JavaScript Logic -->
+    <script src="../static/js/app.js"></script>
+</body>
+</html>
