@@ -1,0 +1,26 @@
+# Local env files
+.env
+.env.*
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Database / local storage
+*.db
+data.db
+
+# FAISS / indexes and model artifacts
+leetcode_index.faiss
+*.faiss
+linear_model.joblib
+
+# Large data files
+Leetcode.csv
+leetcode_metadata.json
+
+# VSCode
+.vscode/
+
+# Logs
+*.log

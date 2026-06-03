@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetGPT - Leetcode Pattern RAG Assistant</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- PrismJS Dark Theme for Code Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.min.js"></script>
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Chat Canvas -->
+        <main class="chat-area">
+            <header class="chat-header glass">
+                <div class="header-left">
+                    <div class="logo">
+                        <i data-lucide="brain-circuit" class="logo-icon"></i>
+                        <h1>Leet<span>GPT</span></h1>
+                    </div>
+                    <div class="status-indicator" id="statusBox">
+                        <span class="status-dot loading"></span>
+                        <span class="status-text" id="statusText">Checking system status...</span>
+                    </div>
+                </div>
+                <div class="chat-header-info">
+                    <h2>Algorithmic Chatbot</h2>
+                    <p>Ask about patterns, algorithms, and complexity analyses</p>
+                </div>
+                <button class="clear-btn" id="clearChatBtn" title="Clear Chat History">
+                    <i data-lucide="trash-2"></i>
+                </button>
+            </header>
+            
+            <div class="messages-container" id="messagesContainer">
+                <!-- Welcome Message -->
+                <div class="message system glass">
+                    <div class="message-avatar">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Welcome to <strong>LeetGPT</strong>! I am your AI assistant trained to understand patterns, strategies, and code structures from over 3,600 Leetcode problems.</p>
+                        <p>Ask me questions like:</p>
+                        <ul>
+                            <li><em>"Explain the <strong>sliding window</strong> pattern and recommend 3 medium problems."</em></li>
+                            <li><em>"What are the best <strong>dp</strong> problems for beginners?"</em></li>
+                            <li><em>"Compare <strong>dfs</strong> vs <strong>bfs</strong> in grids."</em></li>
+                        </ul>
+                        
+                        <p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600;">Quick Topics (Click to query):</p>
+                        <div class="topic-badges" id="quickTopics">
+                            <span class="topic-badge">dp</span>
+                            <span class="topic-badge">dfs</span>
+                            <span class="topic-badge">bfs</span>
+                            <span class="topic-badge">bst</span>
+                            <span class="topic-badge">sliding window</span>
+                            <span class="topic-badge">two pointers</span>
+                            <span class="topic-badge">heap</span>
+                            <span class="topic-badge">trie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="chat-input-area glass">
+                <form id="chatForm">
+                    <textarea id="messageInput" placeholder="Ask about Leetcode patterns (e.g. 'Show me medium DP problems')..." rows="1" required></textarea>
+                    <button type="submit" id="sendBtn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </footer>
+        </main>
+
+        <!-- Context Panel (Retrieved Problems) -->
+        <section class="context-panel glass">
+            <header class="panel-header">
+                <h2><i data-lucide="database"></i> Retrieved Context</h2>
+                <p>FAISS similarity search results</p>
+            </header>
+            
+            <div class="problems-container" id="problemsContainer">
+                <div class="empty-state">
+                    <i data-lucide="search-code" class="empty-icon"></i>
+                    <p>Submit a query to inspect the top-K problems retrieved from the FAISS database.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CDNs for Marked (Markdown Parsing) & PrismJS (Code Highlighting) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

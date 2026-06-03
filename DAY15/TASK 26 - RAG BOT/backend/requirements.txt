@@ -1,0 +1,7 @@
+pandas
+sentence-transformers
+faiss-cpu
+flask
+flask-cors
+google-generativeai
+python-dotenv
